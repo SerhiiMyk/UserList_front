@@ -75,7 +75,7 @@ export default function UserCreateForm() {
                 <span>{passwordError}</span>
                 <br/>
                 <input type="submit" value={'save'} onClick={saveUser}/>
-                <p><strong>validation status</strong>:{JSON.stringify(response)}</p>
+                <p><strong>validation status:</strong>{JSON.stringify(response)}</p>
             </form>
 
         </div>

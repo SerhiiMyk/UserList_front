@@ -70,7 +70,6 @@ export default function UserCreateForm({location: {state}}) {
 
     return (
         <div>
-            <div>{passwordError}</div>
             <form className='form'>
                 <Link to={'/'}>x</Link>
                 <br/>
@@ -92,9 +91,11 @@ export default function UserCreateForm({location: {state}}) {
                 <input type="password" name={'password'} value={user.password} onChange={onChangeFunk}/>
                 <span>confirm password</span>
                 <input type="password" name={'confirmPassword'} value={confirmPassword} onInput={comparePasswords}/>
+                <span>{passwordError}</span>
+                <br/>
                 <input type="submit" value={'edit'} onClick={editUser}/>
                 <input type="submit" value={'delete'} onClick={deleteUser}/>
-                <p><strong>validation status</strong>:{JSON.stringify(response)}</p>
+                <p><strong>validation status:</strong>{JSON.stringify(response)}</p>
             </form>
 
         </div>
