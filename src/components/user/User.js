@@ -1,8 +1,11 @@
-export default function User({user}) {
-  return (
-    <div>
-        {user.id} - {user.email}
+import {Link} from "react-router-dom";
 
-    </div>
-  );
+export default function User({user}) {
+    return (
+        <div>
+            <Link to={{pathname: '/updateUser/' + user.id, state: user}}>
+                {user.id} - {user.email}
+            </Link>
+        </div>
+    );
 }

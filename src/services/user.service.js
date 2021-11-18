@@ -15,8 +15,8 @@ const postUser = (user) => {
         .then((response) => response.json())
 
 }
-const putUser = (choseUser, user) => {
-    return fetch(url + '/' + choseUser.id, {
+const putUser = (user) => {
+    return fetch(url + '/' + user.id, {
         method: 'PUT',
         body: JSON.stringify(user),
         headers: {
@@ -24,7 +24,12 @@ const putUser = (choseUser, user) => {
         },
     })
         .then((response) => response.json())
-        .then((json) => console.log(json));
 }
 
-export {getUsers,postUser,putUser}
+const delUser = (id) => {
+    return fetch(url + '/' + id, {
+        method: 'DELETE'
+    })
+}
+
+export {getUsers, postUser, putUser, delUser}
