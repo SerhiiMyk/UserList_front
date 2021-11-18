@@ -94,7 +94,7 @@ export default function UserCreateForm({location: {state}}) {
                 <input type="password" name={'confirmPassword'} value={confirmPassword} onInput={comparePasswords}/>
                 <input type="submit" value={'edit'} onClick={editUser}/>
                 <input type="submit" value={'delete'} onClick={deleteUser}/>
-                <p>{JSON.stringify(response)}</p>
+                <p><strong>validation status</strong>:{JSON.stringify(response)}</p>
             </form>
 
         </div>
